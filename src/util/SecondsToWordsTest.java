@@ -32,6 +32,39 @@ public class SecondsToWordsTest {
 	public void convertLessThanMinute() {
 		assertThat(SecondsToWords.convertToWords(50), is(" 50 Seconds"));
 	}
-	
-
+	@Test
+	public void convertSingleHour() {
+		assertThat(SecondsToWords.convertToWords(3600), is(" 1 Hour"));
+	}
+	@Test
+	public void convertMultipleHours() {
+		assertThat(SecondsToWords.convertToWords(7200), is(" 2 Hours"));
+	}
+	@Test
+	public void convertMultipleHoursWithMinutes() {
+		assertThat(SecondsToWords.convertToWords(7320), is(" 2 Hours 2 Minutes"));
+	}
+	@Test
+	public void convertMultipleHoursWithMinutesAndSeconds() {
+		assertThat(SecondsToWords.convertToWords(7322), is(" 2 Hours 2 Minutes 2 Seconds"));
+	}
+	public void convertOneDayWithHours() {
+		assertThat(SecondsToWords.convertToWords(86400+3600), is(" 1 Day 1 Hour"));
+	}
+	@Test
+	public void convertOneDayWithHoursAndMinutes() {
+		assertThat(SecondsToWords.convertToWords(86400+3600+180), is(" 1 Day 1 Hour 3 Minutes"));
+	}
+	@Test
+	public void convertOneDayWithHoursWithMinutesAndSeconds() {
+		assertThat(SecondsToWords.convertToWords(86400+3600+180+25), is(" 1 Day 1 Hour 3 Minutes 25 Seconds"));
+	}
+	@Test
+	public void convertOneDay() {
+		assertThat(SecondsToWords.convertToWords(86400), is(" 1 Day"));
+	}
+	@Test
+	public void convertMultipleDays() {
+		assertThat(SecondsToWords.convertToWords(86400*4), is(" 4 Days"));
+	}
 }

@@ -8,8 +8,32 @@ public class SecondsToWords {
 		if (sec == 0) {
 			time = "0 Seconds";
 		}
-		if (sec >= 3600) {
-			
+		if (sec >= 604800 && sec > 0) {
+			int weeks = sec / 604800;
+			if (weeks == 1) {
+				time += " " + weeks + " Week";
+			} else {
+				time += " " + weeks + " Weeks";
+			}
+			sec = sec % 604800;
+		}
+		if (sec >= 86400 && sec > 0) {
+			int days = sec / 86400;
+			if (days == 1) {
+				time += " " + days + " Day";
+			} else {
+				time += " " + days + " Days";
+			}
+			sec = sec % 86400;
+		}
+		if (sec >= 3600 && sec > 0) {
+			int hours = sec / 3600;
+			if (hours == 1) {
+				time += " " + hours + " Hour";
+			} else {
+				time += " " + hours + " Hours";
+			}
+			sec = sec % 3600;
 		}
 		if (sec >= 60 && sec > 0) {
 			int minutes = sec / 60;
