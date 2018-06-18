@@ -28,4 +28,23 @@ public class MyArrayUtils {
 		return max;
 
 	}
+
+	public static String stringReverse(String s) {
+	String s2 ="";
+		if (s.length() == 1) {
+			return s;
+		}
+		if (s.length() > 1) {
+			String reverse = "";
+			for(int i = (s.length()-1); i >= 0 ; i-- ){
+				reverse += s.charAt(i);
+			}
+			return reverse;
+		}
+		
+		if (s.length() == 0) {
+			s2 = s;
+		}
+		return s2;
+	}
 }
