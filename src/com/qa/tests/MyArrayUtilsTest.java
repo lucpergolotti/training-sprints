@@ -41,4 +41,10 @@ public class MyArrayUtilsTest {
 		
 		
 	}
+	@Test
+	public void reverseEmpty() {
+		String s ="";
+		assertEquals(MyArrayUtils.reverseString(s), "");	
+	}
+	
 }

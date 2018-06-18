@@ -28,4 +28,11 @@ public class MyArrayUtils {
 		return max;
 
 	}
+	public static String reverseString(String s) {
+		String s2 ="";
+		if (s.length() == 0) {
+			s2 = s;
+		}
+		return s2;
+	}
 }
