@@ -9,24 +9,24 @@ public class SecondsToWordsTest {
 
 	@Test
 	public void convertZeroSeconds() {
-		assertThat(SecondsToWords.convertToWords(0), is("0 Seconds"));
+		assertThat(SecondsToWords.convertToWords(0), is("Zero Seconds"));
 	}
 	@Test
 	public void convertOneSecond() {
-		assertThat(SecondsToWords.convertToWords(1), is(" 1 Second"));
+		assertThat(SecondsToWords.convertToWords(1), is(" One Second"));
 	}
 	
 	@Test
 	public void convertSingleMinZeroSec() {
-		assertThat(SecondsToWords.convertToWords(60), is(" 1 Minute"));
+		assertThat(SecondsToWords.convertToWords(60), is(" One Minute"));
 	}
 	@Test
 	public void convertSingleMinMultiSec() {
-		assertThat(SecondsToWords.convertToWords(70), is(" 1 Minute 10 Seconds"));
+		assertThat(SecondsToWords.convertToWords(70), is(" One Minute 10 Seconds"));
 	}
 	@Test
 	public void convertMultipleMin() {
-		assertThat(SecondsToWords.convertToWords(135), is(" 2 Minutes 15 Seconds"));
+		assertThat(SecondsToWords.convertToWords(135), is(" Two Minutes 15 Seconds"));
 	}
 	@Test
 	public void convertLessThanMinute() {
