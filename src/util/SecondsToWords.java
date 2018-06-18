@@ -6,7 +6,10 @@ public class SecondsToWords {
 		String time = null;
 		
 		if(sec == 0) {
-			time = "Zero Seconds";
+			time = "0 Seconds";
+		}
+		else if(sec < 60) {
+			time = Integer.toString(sec) + " Seconds";
 		}
 		
 		return time;
