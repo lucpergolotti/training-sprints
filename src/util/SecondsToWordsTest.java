@@ -32,6 +32,9 @@ public class SecondsToWordsTest {
 	public void convertLessThanMinute() {
 		assertThat(SecondsToWords.convertToWords(50), is(" 50 Seconds"));
 	}
-	
+	@Test
+	public void convertMoreThanWeek() {
+		assertThat(SecondsToWords.convertToWords(604800 + 86400 +3600 + 60 + 60), is(" One Week One Day One Hour One Minute One Second"));
+	}
 
 }
