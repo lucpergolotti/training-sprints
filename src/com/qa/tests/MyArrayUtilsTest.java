@@ -12,6 +12,22 @@ public class MyArrayUtilsTest {
 	
 	
 	@Test
+	public void many() {
+		int[] array = {1,2,3};
+		int highest = MyArrayUtils.findHighest(array);
+		assertEquals(highest, 3);
+	}
+	@Test
+	public void empty() {
+		int[] array = {};
+		int highest = MyArrayUtils.findHighest(array);
+		assertEquals(highest, Integer.MIN_VALUE);
+	}
+
+
+	
+	
+	@Test
 	public void findHighestInArrayOfOne() {
 		int[] a1 = new int[1];
 		a1[0] = 10;
@@ -25,6 +41,4 @@ public class MyArrayUtilsTest {
 		
 		
 	}
-
-
 }
